@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import {fetchUsers} from '../store/usersReducer'
+import {fetchUsers} from "../features/users"
 
 const Users = () => {
-    const users = useSelector(state => state.users.users)
+    const users = useSelector(state => state.users.value.users)
     const dispatch = useDispatch()
 
     useEffect(() => {
